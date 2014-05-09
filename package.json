@@ -1,0 +1,27 @@
+{
+  "name": "markdown-editor",
+  "version": "0.1.0",
+  "description": "Markdown editor with live preview, inspired by thlorenz/browserify-markdown-editor",
+  "main": "main.js",
+  "dependencies": {
+    "marked": "~0.3.2",
+    "brace": "~0.2.1",
+    "compression": "~1.0.2",
+    "express": "~4.1.1",
+    "highlight.js": "https://github.com/alessioalex/highlight.js/releases/download/npm-v0.1.0/highlight.js.tgz"
+  },
+  "devDependencies": {
+    "uglify-js": "~2.4.13",
+    "watchify": "~0.8.3",
+    "brfs": "~1.1.1",
+    "browserify": "~3.46.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify main.js -t brfs | uglifyjs --screw-ie8 -mc > public/js/bundle.js",
+    "watch": "watchify main.js -o public/js/bundle.js -dv -t brfs",
+    "engage": "npm run build && npm start"
+  },
+  "author": "Alexandru Vladutu",
+  "license": "MIT"
+}

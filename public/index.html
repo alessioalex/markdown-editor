@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Preview</title>
+  <link rel="stylesheet" href="stylesheets/normalize.css" />
+  <link rel="stylesheet" href="stylesheets/highlightjs-default.css" />
+  <link rel="stylesheet" href="stylesheets/base.css" />
+</head>
+<body>
+  <!-- <h1>Live markdown preview</h1> -->
+
+  <div class="container">
+    <div id="editor"># markdown-editor
+
+![pic](screenshot.png)
+
+Markdown editor with live preview,
+inspired by [thlorenz/browserify-markdown-editor](https://github.com/thlorenz/browserify-markdown-editor)
+
+## opening the editor
+
+```bash
+# build the browserify bundle and start the server
+# on `process.env.PORT` or 7777 by default
+npm run engage
+```
+
+Now open [localhost:7777](http://localhost:7777) and have some markdown fun.
+
+## License
+
+MIT</div>
+    <div id="preview"></div>
+  </div>
+
+  <script src="js/bundle.js"></script>
+</body>
+</html>
